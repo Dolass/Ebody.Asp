@@ -1,0 +1,4 @@
+<!--#include file="include.txt"-->
+<!-- {#:c} -->
+{c.title}{id}{B.title}
+<!-- {/#:c} -->

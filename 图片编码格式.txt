@@ -1,0 +1,27 @@
+输出图像文件头 ：
+Response.BinaryWrite ChrB(66) & ChrB(77) & ChrB(230) & ChrB(4) & ChrB(0) & ChrB(0) & ChrB(0) & ChrB(0) &_
+ChrB(0) & ChrB(0) & ChrB(54) & ChrB(0) & ChrB(0) & ChrB(0) & ChrB(40) & ChrB(0) &_
+ChrB(0) & ChrB(0) & ChrB(40) & ChrB(0) & ChrB(0) & ChrB(0) & ChrB(10) & ChrB(0) &_
+ChrB(0) & ChrB(0) & ChrB(1) & ChrB(0)
+输出图像文件头分析：
+文件标识(2bytes)：ChrB(66) & ChrB(77) 即BM
+文件大小(1dword)：ChrB(230) & ChrB(4) & ChrB(0) & ChrB(0)
+保留字(1dword)：ChrB(0) & ChrB(0) & ChrB(0) & ChrB(0)           说明：保留，必须设置为0
+偏移量(1dword)：ChrB(54) & ChrB(0) & ChrB(0) & ChrB(0)          说明：从文件开始到位图数据开始之间的数据偏移量
+位图信息头长度(1dword)：ChrB(40) & ChrB(0) & ChrB(0) & ChrB(0)  
+位图的宽度(1word)：ChrB(40) & ChrB(0) & ChrB(0) & ChrB(0)       说明：单位为像素
+位图的高度(1dword)：ChrB(10) & ChrB(0) & ChrB(0) & ChrB(0)
+位图的位面数(1dword)：ChrB(1) & ChrB(0)                         说明：该值总为1
+输出图像信息头 ：
+Response.BinaryWrite ChrB(24) & ChrB(0) & ChrB(0) & ChrB(0) & ChrB(0) & ChrB(0) & ChrB(176) & ChrB(4) &_
+ChrB(0) & ChrB(0) & ChrB(18) & ChrB(11) & ChrB(0) & ChrB(0) & ChrB(18) & ChrB(11) &_
+ChrB(0) & ChrB(0) & ChrB(0) & ChrB(0) & ChrB(0) & ChrB(0) & ChrB(0) & ChrB(0) &_
+ChrB(0) & ChrB(0)
+输出图像信息头分析：
+每个像素的位数(2bytes)：ChrB(24) & ChrB(0) 说明：1-单色位图;4-16色位图;8-256色位图;16-16bit;24-24bits;32-32bit
+压缩说明(1dword)：ChrB(0) & ChrB(0) & ChrB(0) & ChrB(0) 说明:0-不压缩;1-rel8压缩;2-rel4压缩;3-bitfields一位域存放
+用字节数表示位图数据大小(1dword)：ChrB(176) & ChrB(4) & ChrB(0) & ChrB(0) 说明：4的倍数；
+水平分辨率(1dword):ChrB(18) & ChrB(11) & ChrB(0) & ChrB(0)  说明：单位为，像素/米
+垂直分辨率(1dword)：ChrB(18) & ChrB(11) & ChrB(0) & ChrB(0)
+位图使用的颜色数(1dword)：ChrB(0) & ChrB(0) & ChrB(0) & ChrB(0)
+重要颜色数(1dword)：ChrB(0) & ChrB(0) & ChrB(0) & ChrB(0)    说明：0-表示所有数据一样重要；

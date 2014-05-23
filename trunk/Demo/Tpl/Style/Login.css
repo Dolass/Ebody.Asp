@@ -1,0 +1,67 @@
+/***************************************************
+Style Name	: login.css
+Function	: 套用登陆界面
+Version		: 1.0
+Author		: Taoya
+Last Update	: 2012/2/26
+***************************************************/
+
+#Main
+{
+	position: relative; 
+	z-index: 1;	/* 如果要将topicimg在linkbar上显示清晰,改为1 */
+	float: left;
+	width: 500px; 
+	/* height: 470px; */
+	margin-top: -30px; 
+	margin-left: 30px;
+}
+
+#InfoBand	/* 信息带(内容) */
+{
+	position: absolute; 
+	z-index: 2;
+	width: 800px; 
+	height: 80px; 
+	margin-top: 70px;
+	/* background-color: #0099ff; filter: alpha(opacity=80); opacity: 0.8; */
+	/* background:url("image/bar_title.gif") repeat-x 0 0; */
+}
+
+#InfoBandBG	/* 信息带(背景) */
+{
+	position: absolute; 
+	z-index: 1; 
+	width: 800px;
+	height: 80px;	
+	margin-top: 70px;
+	clear: both;
+	/* background-color: #0099ff; filter: alpha(opacity=80); opacity: 0.8; */
+	/* background:url("image/bar_title.gif") repeat-x 0 0; */
+	/*
+	border-top:1px solid #18A0D3;
+	border-left:0px solid #18A0D3;
+	border-right:0px solid #1C3F66;
+	border-bottom:1px solid #1C3F66;
+	*/
+}
+
+
+.ArticleTitle	/* 文章标题 */
+{
+	position: relative;
+	z-index: 0;
+	width: 500px;
+	height: 30px;
+	overflow: hidden;
+}
+
+.ArticleBody	/* 文章内容 */
+{
+	position: relative;
+	z-index: 0;
+	margin-bottom: -80px;
+	width: 500px;
+	/* height: 350px; */
+	overflow: visible;
+}

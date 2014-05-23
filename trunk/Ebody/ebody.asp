@@ -68,9 +68,8 @@
 ' 全局初始化
 Dim Ebody : Set Ebody = New Ebody_Base
 
-' 加载配置文件
-' **此配置文件必须要放于服务器根目录下**
-Ebody.Include(Ebody.Root & "/ebody.config.asp")
+' 加载配置文件，如没有指定绝对路径，则为引用文件所在的目录
+Ebody.Include("ebody.config.asp")
 
 Class ebody_base
 	

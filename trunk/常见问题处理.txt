@@ -1,3 +1,0 @@
-1. win7下能正常运行，但到XP下就出现：Microsoft JET Database Engine 错误 '80004005' ,未指定错误
-原因：FAT32盘格式下权限不足的问题。可能是程序原是在Win7下的NTFS盘中执行，后转到xp下的fat32格式下运行。
-解决方法：打开数据库的同时，系统会在临时文件夹 %SystemRoot%/temp/ 下创建临时文件，而 %SystemRoot%/temp/ 的权限不够解决：%SystemRoot%/temp/ 的权限加上(IUSER_电脑名的读写)Ps:其实在这里只要开放一个everyone加入，基本上就解决了，主要还是一个盘符类型的问题所引起的。只有盘的格式是ntfs下才有“安全”选项

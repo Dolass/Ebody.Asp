@@ -1,6 +1,0 @@
-﻿Block A ============= <P>
-Block_A <P>
-
-Block B2 ============= <P>
-
-B_title<P>

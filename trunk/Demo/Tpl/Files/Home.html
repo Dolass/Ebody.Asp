@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww1w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://ww1w.w3.org/1999/xhtml">
+
+<script language=JavaScript type=text/javascript src=http://localhost/taoya2014/Core/Ebody111/Demo/tpl/style/Script/effect.js></script>
+<link rel=stylesheet type=text/css href=http://localhost/taoya2014/Core/Ebody111/Demo/tpl/style/base.css /><link rel=stylesheet type=text/css href=http://localhost/taoya2014/Core/Ebody111/Demo/tpl/style/home.css />
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Language" content="zh-cn">	
+	<meta name="generator" content="taoya">	
+	<title>Welcome to taoya.com</title>	
+</head>
+
+<!--=======================定义CSS=======================-->
+<style>
+.TopicBox{	/* 主题说明框背景 */
+background: url("http://localhost/taoya2014/Core/Ebody111/Demo/tpl/style/image/bar_topic.gif");}
+.shadow{	/* 主题说明框外边框(阴影) */
+background: url("http://localhost/taoya2014/Core/Ebody111/Demo/tpl/style/image/bg_pattern002.gif");}
+#InfoBandBG{	/* 信息带(背景) */
+background: url("http://localhost/taoya2014/Core/Ebody111/Demo/tpl/style/image/bar_title.gif") repeat-x 0 0;
+background-color: #0099ff; filter: alpha(opacity=80); opacity: 0.8;}
+#FooterBar{		/* 页角 background-image:背景只显示一张图片,并且不能使用repeat属性*/
+background-image: url('http://localhost/taoya2014/Core/Ebody111/Demo/tpl/style/image/bar_footer.png');}
+</style>
+
+
+<body onload=ShadowImg('TopicImg')>
+
+
+<!--=======================基本大区=======================-->
+<div id="PageAll"><!--最外层，一般css内只定义width为100%-->
+
+
+	<!--=======================基本中区=======================-->
+	<div id="PageMiddle"><!--第二层，一般css对应定义内容总宽度，小于或等于divAll-->
+
+
+		<div id="TopBar"></div><!--顶部页角-->
+
+
+		<!--=======================主内容区=======================-->
+		<div id="PageMain"><!--第三层，一般这层才是页面内容真正开始层；这样三层的好处是方便扩展-->
+
+
+			<!--=======================顶部标题=======================-->
+			<div id="TopTitle"></div><!--顶部标题-->
+			<!--=======================结束：顶部标题=======================-->
+			
+
+			<!--=======================信息带(内容)=======================-->
+			<div id="InfoBand"><!--信息带-->
+				<!--链接模块-->
+				<div class="PanelLink">
+					<div class="wrap">  
+					<div class="subwrap">  
+					<div class="content"> 
+					
+					/ {PanelLink.3}
+					
+					</div></div></div>
+				</div>
+				<!--搜索模块-->
+				<div class="PanelSearch">
+					<div class="wrap">  
+					<div class="subwrap">  
+					<div class="content"> 
+					<form name=search><input type=text><input type=submit value=GO></form>
+					</div></div></div>
+				</div>
+			</div>
+			<!--=======================结束：信息带(内容)=======================-->
+
+			
+			<!--=======================信息带(背景)=======================-->
+			<div id="InfoBandBG"></div>
+			<!--=======================结束：信息带(背景)=======================-->
+
+
+			<!--=======================左边=======================-->
+			<div id="Main"><!--正文-->
+				<div class="TopSign"><img src=http://localhost/taoya2014/Core/Ebody111/Demo/tpl/style/image/TopSign.png></div><!--标记-->
+				<div id="TopicImg"><img src=http://localhost/taoya2014/Core/Ebody111/Demo/tpl/style/Image/Topic_Img003.jpg></div><!--主题图片-->
+				<div class="ArticleTitle"><img src=http://localhost/taoya2014/Core/Ebody111/Demo/tpl/style/image/New_Icons001.gif><a href=taoya.com> 新的一年，新的开始，梦想不断延续，终将有所成就，2010年加油！</a></div><!--正文标题-->
+				<div class="ArticleBody"></div><!--正文内容-->
+			</div>
+			<!--=======================结束：左边=======================-->
+
+
+			<!--=======================右边=======================-->
+			<div id="Sidebar"><!--侧栏-->
+				<div class="SubTitle">Beta 1.111106</div><!--副标题-->
+				<div class="Title"><img border=0 src=http://localhost/taoya2014/Core/Ebody111/Demo/tpl/style/Image/TaoyaLogo.gif></div><!--主标题-->
+				
+
+				<!--============ Shadown box ============-->
+				<!--新自定义模块，主题评论内容模块及外框半透明风格-->
+				<div class="box">
+				<div class="boxInner">
+					<div class="TopicBox"><!--主题图片框架-->
+						<div class="TopicTitle">今日一品</div><!--主题图片标题-->
+						<div class="TopicSummary">奔驰汽车，是汽车界历史最优久，品牌知名度最高的品牌，无论是从他的汽车产品还是到品牌营销，都称得上是精典。中文品牌“奔驰”也是寓意深远。让人对这个品牌不禁心感崇拜！</div><!--主提图片摘要-->
+						<div class="TopicLink"><a href=http://www.Mercedes-benz.com>Mercedes-benz.com</a></div><!--主提图片链接-->
+					</div>
+				</div>
+				<span class="shadow"></span>
+				</div>
+				<!--============ End : Shadown box =========-->
+
+				
+				<div class="PanelNavBar"><a href=/Brand>品汇</a> | <a href=/Show>品秀</a> | <a href=/Join>加入</a> | <a href=/Gbook>留言</a></div><!--导航-->
+				<div class="Panel"><!--功能模块-->
+					<div class="PanelTitle">块标题</div><!--标题-->
+					<div class="PanelInner">欢迎来到互联网鉴品地带!在这里,您可以了解到众多优秀品牌及其历史,同时您也可以将您的品牌故事与朋友们分享,让更多的精彩随网络传播...</div><!--内容-->
+				</div>
+			</div>
+			<!--=======================结束：右边=======================-->
+
+
+			<!--=======================底部=======================-->
+			<div id="Bottom">
+				<div class="Copyright">
+				{Copyright}
+				</div>
+
+			</div>
+			<!--=======================结束：底部=======================-->			
+
+
+		</div>
+		<!--=======================结束：主内容区=======================-->
+
+
+		<div id="FooterBar"></div><!--底部页角-->
+
+
+	</div>
+	<!--=======================结束：基本中区=======================-->
+
+
+</div>
+<!--=======================结束：基本大区=======================-->
+
+
+</body>
+</html>

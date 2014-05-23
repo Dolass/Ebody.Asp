@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww1w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://ww1w.w3.org/1999/xhtml">
+
+{jsfile}
+{cssfile}
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Language" content="zh-cn">	
+	<meta name="generator" content="taoya">	
+	<title>{WindowTitle}</title>	
+</head>
+
+<!--=======================定义CSS=======================-->
+<style>
+.TopicBox{	/* 主题说明框背景 */
+background: url("{TopicBoxBGImg}");}
+.shadow{	/* 主题说明框外边框(阴影) */
+background: url("{ShadowBGImg}");}
+#InfoBandBG{	/* 信息带(背景) */
+background: url("{InfoBandBGImg}") repeat-x 0 0;
+background-color: #0099ff; filter: alpha(opacity=80); opacity: 0.8;}
+#FooterBar{		/* 页角 background-image:背景只显示一张图片,并且不能使用repeat属性*/
+background-image: url('{FooterBarImg}');}
+</style>
+
+
+<body {onload}>
+
+
+<!--=======================基本大区=======================-->
+<div id="PageAll"><!--最外层，一般css内只定义width为100%-->
+
+
+	<!--=======================基本中区=======================-->
+	<div id="PageMiddle"><!--第二层，一般css对应定义内容总宽度，小于或等于divAll-->
+
+
+		<div id="TopBar">{TopBar}</div><!--顶部页角-->
+
+
+		<!--=======================主内容区=======================-->
+		<div id="PageMain"><!--第三层，一般这层才是页面内容真正开始层；这样三层的好处是方便扩展-->
+
+
+			<!--=======================顶部标题=======================-->
+			<div id="TopTitle">{TopTitle}</div><!--顶部标题-->
+			<!--=======================结束：顶部标题=======================-->
+			
+
+			<!--=======================信息带(内容)=======================-->
+			<div id="InfoBand"><!--信息带-->
+				<!--链接模块-->
+				<div class="PanelLink">
+					<div class="wrap">  
+					<div class="subwrap">  
+					<div class="content"> 
+					<!--{#:PanelLink}-->
+					/ {PanelLink.3}
+					<!--{/#:PanelLink}-->
+					</div></div></div>
+				</div>
+				<!--搜索模块-->
+				<div class="PanelSearch">
+					<div class="wrap">  
+					<div class="subwrap">  
+					<div class="content"> 
+					{PanelSearch}
+					</div></div></div>
+				</div>
+			</div>
+			<!--=======================结束：信息带(内容)=======================-->
+
+			
+			<!--=======================信息带(背景)=======================-->
+			<div id="InfoBandBG"></div>
+			<!--=======================结束：信息带(背景)=======================-->
+
+
+			<!--=======================左边=======================-->
+			<div id="Main"><!--正文-->
+				<div class="TopSign">{TopSign}</div><!--标记-->
+				<div id="TopicImg">{TopicImg}</div><!--主题图片-->
+				<div class="ArticleTitle">{ArticleTitle}</div><!--正文标题-->
+				<div class="ArticleBody">{ArticleBody}</div><!--正文内容-->
+			</div>
+			<!--=======================结束：左边=======================-->
+
+
+			<!--=======================右边=======================-->
+			<div id="Sidebar"><!--侧栏-->
+				<div class="SubTitle">{SubTitle}</div><!--副标题-->
+				<div class="Title">{Title}</div><!--主标题-->
+				
+
+				<!--============ Shadown box ============-->
+				<!--新自定义模块，主题评论内容模块及外框半透明风格-->
+				<div class="box">
+				<div class="boxInner">
+					<div class="TopicBox"><!--主题图片框架-->
+						<div class="TopicTitle">{TopicTitle}</div><!--主题图片标题-->
+						<div class="TopicSummary">{TopicSummary}</div><!--主提图片摘要-->
+						<div class="TopicLink">{TopicLink}</div><!--主提图片链接-->
+					</div>
+				</div>
+				<span class="shadow"></span>
+				</div>
+				<!--============ End : Shadown box =========-->
+
+				
+				<div class="PanelNavBar">{PanelNavBar}</div><!--导航-->
+				<div class="Panel"><!--功能模块-->
+					<div class="PanelTitle">{PanelTitle}</div><!--标题-->
+					<div class="PanelInner">{PanelInner}</div><!--内容-->
+				</div>
+			</div>
+			<!--=======================结束：右边=======================-->
+
+
+			<!--=======================底部=======================-->
+			<div id="Bottom">
+				<div class="Copyright">
+				{Copyright}
+				</div>
+
+			</div>
+			<!--=======================结束：底部=======================-->			
+
+
+		</div>
+		<!--=======================结束：主内容区=======================-->
+
+
+		<div id="FooterBar">{FooterBar}</div><!--底部页角-->
+
+
+	</div>
+	<!--=======================结束：基本中区=======================-->
+
+
+</div>
+<!--=======================结束：基本大区=======================-->
+
+
+</body>
+</html>

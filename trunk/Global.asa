@@ -1,0 +1,56 @@
+﻿<SCRIPT LANGUAGE=vbscript RUNAT=SERVER> 
+
+'################################################################################
+'## Global.asa
+'## -----------------------------------------------------------------------------
+'## 功能:	系统级事件控制
+'## 版本:	1.1 Build 130324
+'## 作者:	Tony
+'## 日期:	2013/07/02
+'## 说明:	系统事件
+'################################################################################
+'EventName              Description
+'Session_OnStart        Runs the first time a user runs any page in your application
+'Session_OnEnd          Runs when a user's session times out or quits your application
+'Application_OnStart    Runs once when the first page of your application is run for the first time by any user
+'Application_OnEnd      Runs once when the web server shuts down
+
+Sub Application_OnStart
+	'**Put your code here **
+'	response.write "Application_OnStart"
+
+	' 第一次启动服务器 把在线人数定义为0
+	Application.Lock
+	application("online") = 0
+	Application.Unlock
+End Sub
+
+Sub Application_OnEnd
+	'**Put your code here **
+'	response.write "Application_OnEnd"
+	'application.Contents.RemoveAll()
+	Set Ebody = Nothing
+End Sub
+
+Sub Session_OnStart
+	'**Put your code here **
+'	response.write "Session On Start"
+	'response.end
+
+	' 当有人访问服务器,就将在线人数+1
+	Application.Lock
+	application("online") = application("online")+1 
+	Application.Unlock
+	
+End Sub
+
+Sub Session_OnEnd
+	'**Put your code here **
+'	response.write "Session_OnEnd"
+
+	' 当来访的人离开时,就将当前在线人数-1
+	Application.Lock
+	application("online") = application("online")-1
+	Application.Unlock
+End Sub
+</SCRIPT>
